@@ -4,6 +4,7 @@
  * Do not modify these two selectors, please
  */
 html {
+
   box-sizing: border-box;
 }
 *, *:before, *:after {
@@ -15,11 +16,22 @@ html {
  */
 
 body {
+  font-family: 'Source Sans 3', sans-serif;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
 }
 
+nav .logo {
+  font-family: 'Bungee', cursive;
+}
+
+/* main {
+  width: 63.5em;
+} */
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+ /*
+ font-family: 'Source Sans 3', sans-serif;
+ font-family: 'Bungee', cursive; */

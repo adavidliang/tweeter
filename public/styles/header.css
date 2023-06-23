@@ -1,0 +1,21 @@
+header {
+  height:400px;
+  padding-top: 70px;
+  background-color: #00dbeb;
+  background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
+  
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+header div {
+  display: flex;
+  justify-content: center;
+}
+.images {
+  
+  padding-top: 50px;
+}
+
+.userID {
+  margin-top: 0;
+}

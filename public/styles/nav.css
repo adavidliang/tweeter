@@ -1,0 +1,54 @@
+/* 120 pixels in height
+Full width of the viewport
+#4056A1 as its default background colour
+#FFFFFF as its default font colour
+<span> within the <nav> uses Bungee as its default font-family
+1.5ems of space on the right and left between the content and the edges */
+
+
+/* //position: fixed;  */
+nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  height: 120px;
+  background-color: #4056A1;
+  color: #FFFFFF;
+}
+
+nav div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav .word {
+  padding-right: 1.5em;
+}
+
+nav .logo {
+  display: flex;
+  padding-left: 1.5em; 
+  line-height: 160px;
+  flex: 1;
+  justify-content: flex-start;
+}
+
+
+.fas.fa-angle-double-down {
+  font-size: 24px; /* You can adjust this value to your desired size */
+  color: red;
+  margin-right: 20px;
+}
+
+span {
+  font-family: 'Bungee', cursive;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+
