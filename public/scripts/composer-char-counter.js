@@ -1,14 +1,20 @@
 $(document).ready(() => {
-  $('#tweet-text').keypress(function () {
-    const input = $(this);
-    const length = input.val().length;
-    const reMain = 140 - length;
-    $('.counter').text(reMain)
-    
+  $('#tweet-text').on('input',function (event) {
+    const $input = $(this);
+    const length = $input.val().length;
+    const reMain = 10 - length;
+
+    const $counter = $input.closest('form').find('.counter');
+
+    $counter.text(reMain)
+
+
+    // $counter.toggleClass("red", reMain < 0);
+    if(reMain < 0) {
+      $('.counter').css('color', 'red');
+    } else {
+      $('.counter').css('color', 'black');
+    }
   })
 
 })
-
-// $("#btn").on('click', function() {
-//   console.log(this); //The this keyword is a reference to the button
-// });

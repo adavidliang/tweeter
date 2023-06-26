@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
@@ -27,6 +28,8 @@ background-image: url("https://www.transparenttextures.com/patterns/argyle.png")
 
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css"/>
 
+    <link rel="stylesheet" href="/styles/desktop-layout.css"/>
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -34,8 +37,11 @@ background-image: url("https://www.transparenttextures.com/patterns/argyle.png")
 
       <script src="url("https://www.transparenttextures.com/patterns/argyle.png");"></script>
 
+      <!-- library import -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <!-- App JS -->
-    <!-- <script type="text/javascript" src="/scripts/client.js"></script> -->
+    <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
@@ -56,14 +62,14 @@ background-image: url("https://www.transparenttextures.com/patterns/argyle.png")
       <div>
           <h2 class="userID">JL</h2><br/>
       </div>
-
   </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form id="newtweetform" action="/tweeter" method="post">
+        <p class="errorDisplay"></p>
+        <form id="newtweetform" >
           <label for="tweet-text">What are you humming about?</label>
+          <!-- <hr/> //a horizonetal line -->
           <textarea name="text" id="tweet-text"></textarea>
           <div class="hello">
             <button class="tweetbutton" type="submit">Tweet</button>
@@ -71,27 +77,8 @@ background-image: url("https://www.transparenttextures.com/patterns/argyle.png")
           </div>
         </form>
       </section>
-      <section class="tweetcontainer">
-        <article class="tweetarticle">
-          <hedaer1 class="username">
-            <h3>name</h3>
-            <p>@somgone</p>
-          </hedaer1>
-          <p class="posttext">this is a post text</p>
-          <footer class="bottomfooter">
-            <day>2 day ago</day>
-            <div class="icon">
-              <i class="fa-regular fa-flag"></i>
-              <i class="fa-sharp fa-solid fa-retweet"></i>
-              <i class="fa-solid fa-heart"></i>
-            </div>
-          </footer>
-        </article>
-      </section>
-      <!-- <div id="div-one" onclick>Click me!</div>
-      <div id="div-two">No! Click Me!</div> -->
+      <section class="tweetcontainer"></section>
     </main>
-    <!-- <textarea id="text2" >here is the text</textarea> -->
 
   </body>
 </html>

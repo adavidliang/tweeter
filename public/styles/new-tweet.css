@@ -29,6 +29,7 @@ justify-content: space-between;
 .counter {
   display: flex;
   align-items: center;
+  
 }
 
 .tweetbutton {
@@ -60,6 +61,9 @@ justify-content: space-between;
   justify-content: space-between;
 }
 
+.userimage {
+  display:flex
+}
 
 .icon i:hover{
   box-shadow: 0px 5px 5px black;
