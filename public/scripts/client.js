@@ -10,9 +10,9 @@ $(() => {
   $('#newtweetform').on('submit', function(event) {
     // stop the browser from atuo submiting the form
     event.preventDefault();
-    const errDisplay = function(errorMessage){
+    const errDisplay = function(errorMessage) {
       $('.errorDisplay').text(errorMessage).css('color', 'red').css('display', 'block');
-    }
+    };
     const datatext = $('#newtweetform').serialize();
     if (!$('#tweet-text').val()) {
       return errDisplay("Type something");
@@ -27,11 +27,11 @@ $(() => {
       url: '/tweets',
       data: datatext,
     }).then(function() {
-      $('#tweet-text').val()
+      $('#tweet-text').val();
       loadTweets();
     })
       .catch((error) => {
-        console.log('Error', error)
+        console.log('Error', error);
       });
   });
 });
@@ -61,7 +61,7 @@ const data = [
     },
     "created_at": 1461113959088
   }
-]
+];
 
 
 const renderTweets = function(tweets) {
@@ -70,18 +70,18 @@ const renderTweets = function(tweets) {
   for (let tweet of tweets) {
     console.log(tweet);
     // calls createTweetElement for each tweet
-    let returntweet = createTweetElement(tweet)
+    let returntweet = createTweetElement(tweet);
     // takes return value and appends it to the tweets container
     $('.tweetcontainer').prepend(returntweet);
   }
-}
+};
 
 const createTweetElement = function(tweet) {
-  const escape = function (str) {
-    let div = document.createElement("div");
-    div.appendChild(document.createTextNode(str));
-    return div.innerHTML;
-  };
+  // const escape = function(str) {
+  //   let div = document.createElement("div");
+  //   div.appendChild(document.createTextNode(str));
+  //   return div.innerHTML;
+  // };
   const $tweet = $(`<article class="tweetarticle">
   <header1 class="username">
   <div class="userimage">
@@ -90,7 +90,7 @@ const createTweetElement = function(tweet) {
     </div>
     <p>${tweet.user.handle}</p>
   </header1>
-  <p class="posttext">${escape(tweet.content.text)}</p>
+  <p class="posttext">${(tweet.content.text)}</p>
   <footer class="bottomfooter">
     <day>${timeago.format(tweet.created_at)}</day>
     <div class="icon">
@@ -99,14 +99,16 @@ const createTweetElement = function(tweet) {
       <i class="fa-solid fa-heart"></i>
     </div>
   </footer>
-</article>`)
+</article>`);
 
   return $tweet;
-}
+};
 
 const loadTweets = function() {
   $.get("/tweets")
     .done(data => {
       renderTweets(data);
-    })
-}
+    });
+};
+
+
