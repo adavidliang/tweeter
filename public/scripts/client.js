@@ -11,7 +11,7 @@ $(() => {
     // stop the browser from atuo submiting the form
     event.preventDefault();
     const errDisplay = function(errorMessage){
-      $('.errorDisplay').text(errorMessage);
+      $('.errorDisplay').text(errorMessage).css('color', 'red').css('display', 'block');
     }
     const datatext = $('#newtweetform').serialize();
     if (!$('#tweet-text').val()) {
