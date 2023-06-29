@@ -11,8 +11,6 @@ $(document).ready(() => {
     if ($('.errorDisplay').css('display') === 'block') {
       $('.errorDisplay').text('');
     }
-
-    // $counter.toggleClass("red", reMain < 0);
     if (reMain < 0) {
       $('.counter').css('color', 'red');
     } else {

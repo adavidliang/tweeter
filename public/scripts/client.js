@@ -77,11 +77,6 @@ const renderTweets = function(tweets) {
 };
 
 const createTweetElement = function(tweet) {
-  // const escape = function(str) {
-  //   let div = document.createElement("div");
-  //   div.appendChild(document.createTextNode(str));
-  //   return div.innerHTML;
-  // };
   const $tweet = $(`<article class="tweetarticle">
   <header1 class="username">
   <div class="userimage">
