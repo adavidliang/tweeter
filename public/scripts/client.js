@@ -27,12 +27,13 @@ $(() => {
       url: '/tweets',
       data: datatext,
     }).then(function() {
-      $('#tweet-text').val();
+      $('#tweet-text').val('');
       loadTweets();
     })
-      .catch((error) => {
-        console.log('Error', error);
-      });
+    .catch((error) => {
+      console.log('Error', error);
+    });
+    $('.counter').text(140);
   });
 });
 

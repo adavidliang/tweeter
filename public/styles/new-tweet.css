@@ -62,8 +62,7 @@ justify-content: space-between;
 }
 
 .icon i:hover {
-  box-shadow: 3px 2px 3px 5px white;
-  background-color: black;
+  color: red
 }
 
 .tweetarticle:hover {
